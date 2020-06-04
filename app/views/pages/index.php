@@ -1,6 +1,14 @@
 <?php require APPROOT . '/views/includes/header.php'; ?>
 
-<h1><?php echo $data['title']; ?></h1>
-<p>This is My MVC PHP Framework</p>
+
+<div class="jumbotron jumbotron-fluid text-center">
+	<div class="container">
+		<h1><?= $data['title']; ?></h1>
+		<p class="lead"><?= $data['description']; ?></p>
+	</div>	
+</div>
+
+
+
 
 <?php require APPROOT . '/views/includes/footer.php'; ?>

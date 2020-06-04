@@ -7,9 +7,12 @@ class Pages extends Controller {
 	}
 
 	public function index() {
+		if (isLoggedIn()) {
+			redirect('posts');
+		}
 		$data = [
 			'title' => 'Poster',
-			'description' => 'Simple blog built using my framework'
+			'description' => 'Log in to see posts'
 		];
 		$this->view('pages/index', $data);
 	}
